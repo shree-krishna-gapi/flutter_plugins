@@ -79,8 +79,8 @@ class HubConnection {
 
     _handshakeProtocol = HandshakeProtocol();
     if (_connection != null) {
-      _connection!
-        ..onreceive = _processIncomingData
+      _connection
+        !..onreceive = _processIncomingData
         ..onclose =
             (Exception? exception) => _connectionClosed(exception: exception);
     }
